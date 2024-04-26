@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.btn {
+    @include color($color:$background-color, $background:$active-element-color);
+    @include boder($boder:none);
+    @include size($width:138px,$height:44px);
+    .btn-content{
+        display: inline-block;
+        text-align: center;
+    }
+    .img-content{
+        margin-bottom: -5px;
+    }
+    &{
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    &:hover{
+        font-weight: bold;
+        box-shadow: 5px 3px $background-award-color;
+    }
+}
