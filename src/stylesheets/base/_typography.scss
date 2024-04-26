@@ -21,9 +21,9 @@ body {
     font-family: $primary-font;
     font-weight: 400;
     font-size: pxToRem(14);
-    max-width: 1800px;
+    max-width: 1440px;
     margin: 0 auto;
-    min-width: 320px;
+    min-width: 375px;
 }
 ::-webkit-scrollbar{
     width: 2px;

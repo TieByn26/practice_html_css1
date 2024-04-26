@@ -51,7 +51,9 @@
         font-weight: $font-weight;
     }
 
-    font-style: normal;
+    @if $font-style {
+        font-style: $font-style;
+    }
 
     @if $line-height {
         line-height: $line-height;
