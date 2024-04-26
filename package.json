@@ -1,0 +1,27 @@
+{
+  "name": "practice-html-css-2",
+  "version": "1.0.0",
+  "description": "- This document introduces my project with time to do it, the target i want to get, the technical i have used, the link to view my website and source code of it and the final is the way to run my project on your local machine.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/pages/index.html",
+    "build": "parcel build ./src/pages/index.html --out-dir public",
+    "lint": "eslint src",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "husky": "^7.0.0",
+    "parcel-bundler": "^1.12.5",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^1.7.4",
+    "sass": "^1.43.4"
+  },
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.10.0",
+    "posthtml": "^0.16.6"
+  }
+}
