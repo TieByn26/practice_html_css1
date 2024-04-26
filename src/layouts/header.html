@@ -1,0 +1,60 @@
+<!-- Start header -->
+<header class="header-container">
+    <!-- Start header top -->
+    <div class="header-top">
+        <div class="header-top__logo">
+            <figure class="header-top__logo-item">
+                <img src="../assets/icon/ic-logo-menu.svg" alt="logo">
+            </figure>
+        </div>
+
+        <nav class="nav-container">
+            <ul class="nav-ul">
+                <include src="./components/navlist.html" locals='{
+                        "classList":"nav__item",
+                        "classLink":"nav__item-link",    
+                        "list":["About","Services","Our Work"]
+
+                    }'>
+                </include>
+            </ul>
+
+            <div class="header-top__button">
+                <include src="./components/button.html" locals='{
+                        "btn":"btn",
+                        "list":[{"content":"CONTACT US","icon":"button"}]
+                }'>
+                </include>
+            </div>
+        </nav>
+
+    </div>
+    <!-- End of header top -->
+
+    <!-- Start header bottom -->
+    <div class="header-bottom">
+
+        <div class="header-bottom__content">
+            <div class="header-bottom__contentA">
+                <p>Make <span>your home</span> an ode to joy</p>
+            </div>
+            <div class="header-bottom__contentB">
+                <p>We turn your empty house to a lovely home, making the compact spaces with sapce saving furnitures. Making the uniques tastes of yours into reality!</p>
+            </div>
+        </div>
+
+        <div class="inner-image">
+            <div class="header-bottom__img">
+                <img src="../assets/img/pic-hero.png" alt="hero img">
+            </div>
+            <div class="header-bottom__icon">
+                <img src="../assets/icon/ic-cta.svg" alt="icon cta">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- End of header bottom -->
+
+</header>
+<!-- End of heder -->
