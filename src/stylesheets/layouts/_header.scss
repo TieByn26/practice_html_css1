@@ -1,0 +1,166 @@
+@use "../abstracts/" as *;
+
+// Start setup style rules for the header section
+.header-container {
+    width: 100%;
+
+    .header-top {
+        width: 100%;
+        padding: 26px 20px;
+
+        @include tablet {
+            padding: 26px 40px;
+            width: 100%;
+        }
+
+        @include desktop {
+            padding: 26px 112px;
+            width: 100%;
+        }
+
+        @include flex($display: flex, $justify: space-between, $align: center);
+    }
+
+    .nav-container {
+        @include flex($display: flex, $justify: space-between, $gap: 16px, $align: baseline);
+
+        .nav-ul {
+            @include flex($display: none);
+        }
+
+        @include tablet {
+            .nav-ul {
+                @include flex($display: flex);
+            }
+        }
+
+        @include desktop {
+            .nav-ul {
+                @include flex($display: flex);
+            }
+        }
+    }
+
+    // Finish of setup style rules for navigation
+
+    .header-bottom {
+        width: 100%;
+
+        .header-bottom__content {
+            @include tablet {
+                width: 100%;
+            }
+
+            @include desktop {
+                width: 100%;
+            }
+
+            margin: auto;
+            margin-top: 82px;
+            width: 335px;
+
+            @include flex($justify: space-between, $align: center, $gap: 24px);
+
+            .header-bottom__contentA {
+                text-align: center;
+                color: $background-award-color;
+
+                @include font($font-family: $fourth-font, $font_size: 48px, $font-weight: 500, $line-height: 60px);
+
+                span {
+                    font-style: italic;
+                }
+
+                @include tablet {
+                    @include font($font_size: 72px, $line-height: 96px);
+                }
+
+                @include desktop {
+                    @include font($font_size: 72px, $line-height: 96px);
+                }
+            }
+
+            .header-bottom__contentB {
+                text-align: center;
+                margin-top: 24px;
+
+                @include font($font-family: $primary-font, $font-size: 18px, $font-weight: 300, $line-height: 32px);
+
+                @include tablet {
+                    width: 688px;
+                    margin: auto;
+                    margin-top: 24px;
+                    @include font($font_size: 20px, $line-height: 32px);
+                }
+
+                @include desktop {
+                    width: 800px;
+                    margin: auto;
+                    margin-top: 24px;
+                    @include font($font_size: 20px, $line-height: 32px);
+                }
+            }
+        }
+
+
+        .inner-image {
+            position: relative;
+
+            .header-bottom__img {
+                @include size($width: 375px, $height: 640px);
+
+                margin: auto;
+                margin-top: 80px;
+
+                img {
+                    @include size($width: 375px, $height: 640px);
+                    object-fit: cover;
+                }
+
+                @include tablet {
+                    width: 100%;
+                    img {
+                        @include size($width: 100%, $height: 100%px);
+                        object-fit: cover;
+                    }
+                }
+
+                @include desktop {
+                    width: 100%;
+                    img {
+                        @include size($width: 100%, $height: 100%px);
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .header-bottom__icon {
+                position: absolute;
+                top: -60px;
+                left: 127px;
+                cursor: pointer;
+
+                @include tablet {
+                    left: 324px;
+                }
+    
+                @include desktop {
+                    left: 112px;
+                }
+
+                & {
+                    transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+        }
+    }
+
+    // Finish of setup style rules for header content
+
+}
+
+// Finishing setup style rules for the header section
