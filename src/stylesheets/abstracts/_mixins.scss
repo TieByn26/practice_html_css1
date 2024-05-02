@@ -1,0 +1,110 @@
+@use './functions';
+@use './variables' as *;
+
+//mixin_size
+@mixin size($width: false, $height: false) {
+    @if width !=false {
+        width: $width;
+    }
+
+    @if height !=false {
+        height: $height;
+    }
+}
+
+//mixin_boder
+
+@mixin boder($boder-radius: false, $boder: false) {
+    @if border-radius !=false {
+        border-radius: $boder-radius;
+    }
+
+    @if border !=false {
+        border: $boder;
+    }
+}
+
+//mixin_color
+
+@mixin color($color: false, $background: false) {
+    @if color !=false {
+        color: $color;
+    }
+
+    @if background !=false {
+        background-color: $background;
+    }
+}
+
+//mixin_font
+
+@mixin font($font-family: false, $font_size: false, $font-weight: false, $font-style: false, $line-height: false) {
+    @if ($font-family !=false) {
+        font-family: $font-family;
+    }
+
+    @if $font-size {
+        font-size: $font-size;
+    }
+
+    @if $font-weight {
+        font-weight: $font-weight;
+    }
+
+    font-style: normal;
+
+    @if $line-height {
+        line-height: $line-height;
+    }
+}
+
+//mixin_flex
+
+@mixin flex ($display: false, $direction: false, $align: false, $justify: false, $wrap: false, $gap: false) {
+    @if display {
+        display: $display;
+    }
+
+    @if direction {
+        flex-direction: $direction;
+    }
+
+    @if align {
+        align-items: $align;
+    }
+
+    @if justify {
+        justify-content: $justify;
+    }
+
+    @if wrap {
+        text-wrap: $wrap;
+    }
+
+    @if gap {
+        gap: $gap;
+    }
+}
+
+//mixin_bgrcolor
+
+@mixin bg-color($color) {
+    background-color: $color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+//mixin_responsive
+
+@mixin tablet {
+    @media (min-width:$small) and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}

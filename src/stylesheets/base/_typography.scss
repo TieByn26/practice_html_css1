@@ -1,0 +1,33 @@
+@use "../abstracts/" as *;
+
+@font-face {
+    font-family: lightOutfit ;
+    src: url(../assets/font/Outfit-Light.ttf) format("truetype");
+}
+@font-face {
+    font-family: MediumOutfit;
+    src: url(../assets/font/Outfit-Medium.ttf) format("truetype");
+}
+@font-face {
+    font-family: RegularOutfit;
+    src: url(../assets/font/Outfit-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: RegularPlayfairDisplay;
+    src: url(../assets/font/PlayfairDisplay-Regular.ttf) format("truetype");
+}
+
+body {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: pxToRem(14);
+    max-width: 1800px;
+    margin: 0 auto;
+    min-width: 320px;
+}
+::-webkit-scrollbar{
+    width: 2px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $background-color;
+}
