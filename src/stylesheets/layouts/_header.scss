@@ -72,6 +72,8 @@
                 }
 
                 @include tablet {
+                    width: 90%;
+                    margin: auto;
                     @include font($font_size: 72px, $line-height: 96px);
                 }
 
@@ -87,7 +89,7 @@
                 @include font($font-family: $primary-font, $font-size: 18px, $font-weight: 300, $line-height: 32px);
 
                 @include tablet {
-                    width: 688px;
+                    width: 90%;
                     margin: auto;
                     margin-top: 24px;
                     @include font($font_size: 20px, $line-height: 32px);
@@ -141,7 +143,7 @@
                 cursor: pointer;
 
                 @include tablet {
-                    left: 324px;
+                    left: 42%;
                 }
     
                 @include desktop {
