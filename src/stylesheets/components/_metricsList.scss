@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+
+.list-metric{
+    @include flex($display:flex, $align:center, $gap:16px);
+    .list-metric--contentA{
+        @include font($font-family:$fourth-font, $font_size:48px, $font-weight:400, $line-height:60px);
+        @include color($color:$background-award-color);
+
+        @include tablet{
+            @include font($font_size:60px, $line-height:72px);
+        }
+        @include desktop{
+            @include font($font_size:60px, $line-height:72px);
+        }
+    }
+    .list-metric--contentB{
+        @include font($font-family:$third-font, $font_size:14px, $font-weight:400, $line-height:20px);
+        @include color($color:$background-award-color);
+        @include tablet{
+            @include font($font_size:14px);
+        }
+        @include desktop{
+            @include font($font_size:14px);
+        }
+    }
+
+}
