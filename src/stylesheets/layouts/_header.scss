@@ -4,14 +4,17 @@
 .header-container {
 
     .header-top {
+        width: 100%;
         padding: 26px 20px;
 
         @include tablet {
             padding: 26px 40px;
+            width: 100%;
         }
 
         @include desktop {
             padding: 26px 112px;
+            width: 100%;
         }
 
         @include flex($display: flex, $justify: space-between, $align: center);
@@ -40,8 +43,17 @@
     // Finish of setup style rules for navigation
 
     .header-bottom {
+        width: 100%;
 
         .header-bottom__content {
+            @include tablet {
+                width: 100%;
+            }
+
+            @include desktop {
+                width: 100%;
+            }
+
             margin: auto;
             margin-top: 82px;
             width: 335px;
@@ -96,7 +108,7 @@
             position: relative;
 
             .header-bottom__img {
-                @include size($width: 100%, $height: 100%);
+                @include size($width: 100%, $height: 640px);
 
                 margin: auto;
                 margin-top: 80px;
@@ -104,6 +116,19 @@
                 img {
                     @include size($width: 100%, $height: 100%);
                     object-fit: cover;
+                }
+
+                @include tablet {
+                    img {
+                        object-fit: cover;
+                    }
+                }
+
+                @include desktop {
+
+                    img {
+                        object-fit: cover;
+                    }
                 }
             }
 
