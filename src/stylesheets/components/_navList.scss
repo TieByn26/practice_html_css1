@@ -1,15 +1,17 @@
 @use "../abstracts/" as *;
 
-.nav-container{
-    ul{
-        @include flex($display:flex,$justify:space-between,$gap: 10px, $align: center);
-        .nav__item{
-            &-link{
-                @include font($font-family:$secondary-font,$font-size:pxToRem(14),$font-weight:500,$line-height:24px);
-                @include color($color:$text-color-primary);
+.nav-container {
+    ul {
+        @include flex($display: flex, $justify: space-between, $gap: 10px, $align: center);
+
+        .nav__item {
+            &-link {
+                @include font($font-family: $secondary-font, $font-size: pxToRem(14), $font-weight: 500, $line-height: 24px);
+                @include color($color: $text-color-primary);
                 padding: 0 16px;
                 text-decoration: none;
-                &:hover{
+
+                &:hover {
                     color: $active-element-color;
                     font-weight: 900;
                 }
