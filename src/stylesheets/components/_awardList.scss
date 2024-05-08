@@ -2,14 +2,11 @@
 
 .award{
     @include tablet{
-        width: 100%;
         height: 240px;
     }
     @include desktop{
-        width: 100%;
         height: 128px;
     }
-    width: 100%;
     padding: 24px, 20px, 24px, 20px;
 
     @include color($background: $background-award-color);
@@ -46,7 +43,7 @@
         ul{
             @include flex($display: flex, $gap: 24px,$direction: column);
             li{
-                color: #D9D9D6;
+                color:  $text-color-second;
                 width: 251px;
                 @include flex($display: flex, $align: center);
                 p{
