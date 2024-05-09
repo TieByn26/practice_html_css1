@@ -1,92 +1,116 @@
 @use "../abstracts/" as *;
 
-.about{
+.about {
     margin: auto;
-    .about-container{
+
+    .about-container {
         width: 100%;
         padding: 48px 0px;
-        @include flex($display:flex, $direction:column, $align:center,$gap:96px);
-        @include desktop{
+        @include flex($display: flex, $direction: column, $align: center, $gap: pxToRem(96));
+
+        @include desktop {
             display: flex;
-            flex-direction: row ;
+            flex-direction: row;
             padding: 128px 0;
             width: 85%;
             margin: auto;
         }
-        @include tablet{
+
+        @include tablet {
             padding: 96px 0;
         }
-        .about-content-para{
+
+        .about-content-para {
             width: 90%;
             margin: auto;
-            @include flex($display:flex, $direction:column, $align:center,$gap:24px);
+            @include flex($display: flex, $direction: column, $align: center, $gap: pxToRem(24));
 
-            .about-us{
+            .about-us {
                 opacity: 80%;
-                @include flex($display:flex, $align:center,$gap:16px);
-                @include color($color:#996830);
+                @include flex($display: flex, $align: center, $gap: pxToRem(16));
+                @include color($color: $active-element-color);
                 margin-right: auto;
-                hr{
-                    width: 64px;
-                    height: 1px;
-                    @include boder($boder:1px solid #996830);
+
+                hr {
+                    @include size($width:pxToRem(64));
+                    @include boder($boder: 1px solid $active-element-color);
                 }
-                p{
-                    @include font($font-family:$third-font,$font_size:pxToRem(14),$font-weight:600,$line-height:20px);
+
+                p {
+                    @include font($font-family: $third-font, $font_size: pxToRem(14), $font-weight: 600, $line-height: pxToRem(20));
                 }
             }
-            .contentA{
-                @include color($color:$background-award-color);
-                @include font($font-family:$fourth-font,$font_size:pxToRem(36),$font-weight:400,$line-height:pxToRem(48));
-                span{
+
+            .contentA {
+                @include color($color: $background-award-color);
+                @include font($font-family: $fourth-font, $font_size: pxToRem(36), $font-weight: 400, $line-height: pxToRem(48));
+
+                span {
                     font-style: italic;
                 }
             }
-            .contentB, .contentC{
-                @include color($color:$text-color-primary);
-                @include font($font-family:$primary-font,$font_size:pxToRem(16),$font-weight:300,$line-height:pxToRem(24));
+
+            .contentB,
+            .contentC {
+                @include color($color: $text-color-primary);
+                @include font($font-family: $primary-font, $font_size: pxToRem(16), $font-weight: 300, $line-height: pxToRem(24));
             }
-            @include tablet{
-                .contentA{
-                    @include font($font-family:$fourth-font,$font_size:pxToRem(60),$font-weight:400,$line-height:pxToRem(72));
+
+            @include tablet {
+                .contentA {
+                    @include font($font-family: $fourth-font, $font_size: pxToRem(60), $font-weight: 400, $line-height: pxToRem(72));
                 }
-                .contentB, .contentC{
-                    @include font($font-family:$primary-font,$font_size:pxToRem(18),$font-weight:300,$line-height:pxToRem(32));
+
+                .contentB,
+                .contentC {
+                    @include font($font-family: $primary-font, $font_size: pxToRem(18), $font-weight: 300, $line-height: pxToRem(32));
                 }
             }
-            @include desktop{
+
+            @include desktop {
                 width: 101%;
-                .contentA{
-                    @include font($font-family:$fourth-font,$font_size:pxToRem(60),$font-weight:400,$line-height:pxToRem(72));
+
+                .contentA {
+                    @include font($font-family: $fourth-font, $font_size: pxToRem(60), $font-weight: 400, $line-height: pxToRem(72));
                 }
-                .contentB, .contentC{
-                    @include font($font-family:$primary-font,$font_size:pxToRem(18),$font-weight:300,$line-height:pxToRem(32));
+
+                .contentB,
+                .contentC {
+                    @include font($font-family: $primary-font, $font_size: pxToRem(18), $font-weight: 300, $line-height: pxToRem(32));
                 }
             }
         }
-        .about-content-img{
+
+        .about-content-img {
             position: relative;
             width: 90%;
             margin: auto;
             display: flex;
             justify-content: space-around;
-            .img1, .img2{
+
+            .img1,
+            .img2 {
                 width: 47%;
             }
-            .img1{
+
+            .img1 {
                 padding-bottom: 14%;
             }
-            .img2{
+
+            .img2 {
                 padding-top: 14%;
             }
-            .img3{
+
+            .img3 {
                 position: absolute;
-                top:-56px;
-                left: 141px;
-                @include tablet{
+                top: pxToRem(-51);
+                left: pxToRem(141);
+
+                @include tablet {
                     left: 44%;
                 }
-                @include desktop{
+
+                @include desktop {
                     left: 42%;
                 }
             }
