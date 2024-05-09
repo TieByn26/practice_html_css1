@@ -2,7 +2,6 @@
 
 // Start setup style rules for the header section
 .header-container {
-    width: 100%;
 
     .header-top {
         width: 100%;
@@ -72,6 +71,8 @@
                 }
 
                 @include tablet {
+                    width: 90%;
+                    margin: auto;
                     @include font($font_size: 72px, $line-height: 96px);
                 }
 
@@ -87,7 +88,7 @@
                 @include font($font-family: $primary-font, $font-size: 18px, $font-weight: 300, $line-height: 32px);
 
                 @include tablet {
-                    width: 688px;
+                    width: 90%;
                     margin: auto;
                     margin-top: 24px;
                     @include font($font_size: 20px, $line-height: 32px);
@@ -107,28 +108,25 @@
             position: relative;
 
             .header-bottom__img {
-                @include size($width: 375px, $height: 640px);
+                @include size($width: 100%, $height: 640px);
 
                 margin: auto;
                 margin-top: 80px;
 
                 img {
-                    @include size($width: 375px, $height: 640px);
+                    @include size($width: 100%, $height: 100%);
                     object-fit: cover;
                 }
 
                 @include tablet {
-                    width: 100%;
                     img {
-                        @include size($width: 100%, $height: 100%px);
                         object-fit: cover;
                     }
                 }
 
                 @include desktop {
-                    width: 100%;
+
                     img {
-                        @include size($width: 100%, $height: 100%px);
                         object-fit: cover;
                     }
                 }
@@ -141,7 +139,7 @@
                 cursor: pointer;
 
                 @include tablet {
-                    left: 324px;
+                    left: 42%;
                 }
     
                 @include desktop {

@@ -1,0 +1,108 @@
+@use "../abstracts/" as *;
+
+.award{
+    @include tablet{
+        height: 240px;
+    }
+    @include desktop{
+        height: 128px;
+    }
+    padding: 24px, 20px, 24px, 20px;
+
+    @include color($background: $background-award-color);
+    @include flex($display: flex, $align:center, $gap: 10px);
+    
+    .award-list{
+        margin: auto;
+        padding: 24px 0;
+        @include flex($display: flex, $align:center, $justify:space-between, $gap: 20px);
+        .content_line{
+            @include flex($display: flex, $align:center);
+            padding: 0;
+            margin: 0 0 300px -30px;
+
+            @include size($width:64px,$height:76px);
+            p{
+                span{
+                    color: $background-color;
+                    opacity: 50%;
+                    @include font($font-family: $fourth-font,$font-size:24px,$font-weight:400,$font-style:italic,$line-height:32px);
+                }
+                transform: rotate(-90deg);
+            }
+            hr{
+                color: $background-color;
+                opacity: 50%;
+                height: 24px;
+                transform: rotate(-90deg);
+            }
+        }
+
+        @include size($width: 89%, $height: 89%);
+
+        ul{
+            @include flex($display: flex, $gap: 24px,$direction: column);
+            li{
+                color:  $text-color-second;
+                width: 251px;
+                @include flex($display: flex, $align: center);
+                p{
+                    @include size($width: 141px, $height: 48px);
+                    margin-left: 10px;
+                }
+                gap:12px;
+            }
+            li:nth-child(3){
+                p{
+                    @include size($width:101px,$height:48px);
+                }
+            }
+        }
+        @include tablet{
+            padding: 24px 0;
+            margin: auto;
+            @include size($width: 688px, $height: 192px);
+            ul{
+                @include flex($display: flex, $align: center);
+                flex-direction: row;
+                flex-wrap: wrap;
+                li{
+                    width: 47%;
+                }
+                margin-right: -40px;
+                padding-left: 30px;
+                
+            }
+            .content_line{
+                width: 136px;
+                margin: auto;
+                p{
+                    margin-left: -30px;
+                }
+                hr{
+                    height: 64px;
+                    margin-left: 30px;
+                }
+                
+            }
+
+        }
+        @include desktop{
+            padding: 24px 0;
+            margin: auto;
+            @include size($width: 1216px, $height: 80px);
+            ul{
+                @include flex($display: flex, $align: center);
+                flex-direction: row;
+            }
+            .content_line{
+                hr{
+                    height: 64px;
+                    margin-left: 30px;
+                }
+                margin-top: 300px;
+                
+            }
+        }
+    }
+}
