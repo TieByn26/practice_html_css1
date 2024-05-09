@@ -20,5 +20,69 @@
     </section>
     <!-- end of section award -->
     <!-- start of section about -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-content-para">
+                <div class="about-us">
+                    <hr>
+                    <p>ABOUT US</p>
+                </div>
+                <p class="contentA">We help to bring your <span>dream home</span> to reality</p>
+                <p class="contentB">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi.</p>
+                <p class="contentC">Tempor dolor elementum tellus non ipsum faucibus. Justo, magna mauris posuere auctor justo. Habitant proin aliquet volutpat leo ultricies. Dui blandit eget vitae turpis ultrices aliquet nunc. Faucibus sit odio bibendum lobortis diam.</p>
+            </div>
+            <div class="about-content-img">
+                <img class="img1" src="../assets/img/pic-about1.png" alt="img about">
+                <img class="img2" src="../assets/img/pic-about2.png" alt="img about">
+                <img class="img3" src="../assets/icon/ic-badge.svg" alt="icon badge">
+            </div>
+        </div>
+    </section>
+    <!-- end section about -->
+    <!-- start section metrics -->
+    <section class="metrics">
+        <div class="metrics--list">
+            <ul>
+                <include src="./components/metricList.html" locals='{
+                    "list":[{"contentA":"100%","contentB":"SATISFITATION CLIENTS"},
+                    {"contentA":"250","contentB":"EMPLOYEES ON WORLDWIDE"},
+                    {"contentA":"3469","contentB":"PROJECTS COMPLETED ON 60 COUNTRIES"}]
+                }'>
+                    
+                </include>
+            </ul>
+        </div>
+        <div class="metrics--line">
+            <hr>
+        </div>
+
+    </section>
+    <!-- end section metrics -->
+    <!-- start section services -->
+    <section class="services">
+        <div class="services__box">
+            <div class="services__box--top">
+                <div class="services__box--top--eyebrow">
+                    <hr>
+                    <p>OUR SERVICES</p>
+                </div>
+                <div class="services__box--top--title">
+                    <p>We provide the <span>best solutions</span> for your dream home</p>
+                </div>
+            </div>
+            <div class="services__box--item">
+                <ul>
+                    <include src="./components/box.html" locals='{
+                        "list":[{"icon":"service3","contentA":"Architectural & Interior design","contentB":"Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies."},
+                                {"icon":"service1","contentA":"Building Renovation","contentB":"Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies."},
+                                {"icon":"service2","contentA":"Construciton Management","contentB":"Non diam pretium tristique augue placerat dolor. Accumsan nibh nunc, molestie volutpat ipsum, ultricies."}]
+                    }'>
+                        
+                    </include>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- end of section services -->
 
 </main>
