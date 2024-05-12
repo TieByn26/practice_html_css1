@@ -84,5 +84,58 @@
         </div>
     </section>
     <!-- end of section services -->
+    <!-- start section works -->
+    <section class="works">
+        <div class="works__box">
+            <div class="works__box--col1">
+                <div class="works__box--col1--content">
+                    <div class="works__box--col1--eyebrow">
+                        <hr>
+                        <p>RECENT WORKS</p>
+                    </div>
+                    <div class="works__box--col1--title">
+                        <p>Some of <span>our crafts</span> made with love</p>
+                    </div>
+                </div>
+                <div class="works__box--col1--project">
+                    <ul>
+                        <include src="./components/boxwork.html" locals='{
+                            "list":[{"image":"work1","contentA":"Villa Furnishing & Interior","contentB":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam. Erat id laoreet posuere etiam morbi."}]
+                        }'>
+                            
+                        </include>
+                    </ul>
+                </div>
+                <div class="works__box--col1-button">
+                    <include src="./components/button.html" locals='{
+                        "btn":"btn",
+                        "list":[{"content":"CONTACT US","icon":"button"}]
+                    }'>
+                        
+                    </include>
+                </div>
+            </div>
+            <div class="works__box--col2">
+                <div class="works__box--col2--project">
+                    <ul>
+                        <include src="./components/boxwork.html" locals='{
+                            "list":[{"image":"work2","contentA":"Luxury Hotel Renovation","contentB":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam."},
+                                    {"image":"work3","contentA":"Residence Swimming Pool","contentB":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus fringilla dui amet faucibus nam."}]
+                        }'>
+                            
+                        </include>
+                    </ul>
+                </div>
+                <div class="works__box--col2--button">
+                    <include src="./components/button.html" locals='{
+                        "btn":"btn",
+                        "list":[{"content":"CONTACT US","icon":"button"}]
+                    }'>
+                       
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of section works -->
 
 </main>

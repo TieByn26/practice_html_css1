@@ -1,0 +1,131 @@
+@use "../abstracts/" as *;
+
+.works {
+    @include desktop{
+        padding: pxToRem(112) 0;
+    }
+    .works__box {
+        @include size($width: 100%);
+        @include flex($display: flex, $direction: column, $gap: pxToRem(40));
+
+        @include desktop-and-tablet {
+            @include flex($gap: pxToRem(80));
+        }
+
+        @include desktop {
+            @include size($width: 85.5%);
+            @include flex($display: flex, $direction: row, $gap: pxToRem(40));
+            margin: auto;
+        }
+
+        .works__box--col1 {
+            @include size($width: 90%);
+            margin: auto;
+            @include flex($display: flex, $direction: column, $gap: pxToRem(24));
+
+            @include desktop {
+                @include size($width: 49%);
+                gap: pxToRem(96);
+                margin-bottom: 90px;
+            }
+
+            .works__box--col1--content {
+                @include flex($display: flex, $direction: column, $gap: pxToRem(24));
+
+                .works__box--col1--eyebrow {
+                    padding-top: pxToRem(40);
+                    @include desktop{
+                        padding-top: 0;
+                    }
+                    opacity: 80%;
+                    @include flex($display: flex, $align: center, $gap: pxToRem(16));
+                    @include color($color: $active-element-color);
+                    margin-right: auto;
+
+                    hr {
+                        @include size($width: pxToRem(64));
+                        @include boder($boder: 1px solid $active-element-color);
+                    }
+
+                    p {
+                        @include font($font-family: $third-font, $font_size: pxToRem(14), $font-weight: 600, $line-height: pxToRem(20));
+                    }
+                }
+
+                .works__box--col1--title {
+                    @include color($color: $background-award-color);
+                    @include font($font-family: $fourth-font, $font_size: pxToRem(36), $font-weight: 400, $line-height: pxToRem(48));
+
+                    span {
+                        font-style: italic;
+                    }
+
+                    @include desktop-and-tablet {
+                        @include font($font-family: $fourth-font, $font_size: pxToRem(60), $font-weight: 400, $line-height: pxToRem(72));
+                    }
+                }
+            }
+
+            .works__box--col1--project {
+                @include tablet {
+                    padding-top: pxToRem(20);
+                }
+
+                ul {
+                    li {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .works__box--col1-button {
+                display: none;
+
+                @include desktop {
+                    display: block;
+                }
+            }
+        }
+
+        .works__box--col2 {
+            @include size($width: 90%);
+            @include flex($display: flex, $direction: column, $gap: pxToRem(40));
+
+            @include desktop {
+                @include size($width: 49%);
+            }
+
+            margin: auto;
+
+            .works__box--col2--project {
+                ul {
+                    @include flex($display: flex, $direction: column, $gap: pxToRem(40));
+
+                    @include desktop-and-tablet {
+                        @include flex($gap: pxToRem(80));
+                    }
+
+                    @include desktop {
+                        @include size($width: 81%);
+                        margin: auto;
+                    }
+
+                    li {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .works__box--col2--button {
+                padding-bottom: pxToRem(40);
+                @include desktop{
+                    display: none;
+                }
+            }
+        }
+    }
+}

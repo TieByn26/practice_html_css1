@@ -30,6 +30,9 @@
         @include tablet {
             .nav-ul {
                 @include flex($display: flex);
+                @media screen and (max-width: pxToRem(527)){
+                    @include flex($display: none); 
+                }
             }
         }
 

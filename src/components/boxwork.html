@@ -1,0 +1,11 @@
+<each loop="item in {{list}}">
+    <li class="box-works">
+        <div class="box-works--img">
+            <img src="../assets/img/pic-{{item.image}}.png" alt="image">
+        </div>
+        <div class="box-works__content">
+            <p class="box-works__content--title">{{item.contentA}}</p>
+            <p class="box-works__content--description">{{item.contentB}}</p>
+        </div>
+    </li>
+</each>
