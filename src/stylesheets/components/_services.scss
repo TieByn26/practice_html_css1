@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 .services {
-
+    padding: pxToRem(82) 0;
     .services__box {
         @include size($width: 90%);
         @include flex($display:flex ,$direction: column, $gap: pxToRem(40));
