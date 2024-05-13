@@ -1,22 +1,19 @@
 @use "../abstracts/" as *;
 
 .award {
-    padding: 24px 0;
-
+    padding: pxToRem(20) 0;
     @include color($background: $background-award-color);
     @include flex($display: flex, $align: center, $gap: 10px);
 
     .award-list {
         margin: auto;
-        padding: 24px 20px;
         @include flex($display: flex, $align: center, $justify: space-between, $gap: 20px);
 
         .content_line {
             @include flex($display: flex, $align: center);
             margin: 0 0 300px -30px;
-            padding: 10px;
 
-            @include size($width: 64px, $height: 76px);
+            @include size($width: 100px, $height: 76px);
 
             p {
                 span {
@@ -37,7 +34,6 @@
         }
 
         ul {
-            padding: 0 36px;
             @include flex($display: flex, $gap: 24px, $direction: column);
 
             li {
@@ -60,8 +56,8 @@
 
         @include tablet {
             margin: auto;
-            @include size($width: 90%);
-            padding: 40px;
+            @include size($width: 80%);
+
 
             ul {
                 @include flex($display: flex, $align: center);

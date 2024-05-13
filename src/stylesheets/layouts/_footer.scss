@@ -1,0 +1,173 @@
+@use "../abstracts/" as *;
+
+.footer {
+    width: 100%;
+    @include flex($display: flex, $direction: column, $gap: pxToRem(40));
+    padding: 8px 0 40px 0;
+
+    @include tablet {
+        padding: 8px 0 80px 0;
+        gap: pxToRem(80);
+    }
+    @include desktop{
+        padding-bottom: pxToRem(80);
+        gap: pxToRem(80);
+    }
+
+    .footer__top {
+        @include flex($display: flex, $direction: column, $gap: pxToRem(48));
+        @include size($width: 90%);
+        @include desktop{
+            @include size($width: 87%);
+            gap: pxToRem(80);
+        }
+        margin: auto;
+
+        .footer__top--divider {
+            hr {
+                border: 1px solid $text-color-second;
+            }
+
+            padding-top: pxToRem(4);
+            padding-bottom: pxToRem(-8);
+        }
+
+        .footer__top__content {
+            @include flex($display: flex, $direction: column, $gap: pxToRem(48));
+            @include desktop{
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .footer__top__content--left {
+                @include font($font-family: $fourth-font, $font_size: pxToRem(30), $font-weight: 400, $line-height: pxToRem(40));
+                @include color($color: $background-award-color);
+
+                a {
+                    font-style: italic;
+                    @include color($color: $active-element-color);
+                }
+
+                @include tablet {   
+                    @include size($width: 88%);
+                    @include font($font-family: $fourth-font, $font_size: pxToRem(48), $font-weight: 400, $line-height: pxToRem(60));
+                }
+                @include desktop{
+                    @include size($width: 44%);
+                    @include font($font-family: $fourth-font, $font_size: pxToRem(48), $font-weight: 400, $line-height: pxToRem(60));
+                }
+            }
+
+            .footer__top__content__right {
+                @include flex($display: flex, $direction: column, $gap: pxToRem(48));
+
+                .footer__top__content__right--address {
+                    .address1 {
+                        @include font($font-family: $fourth-font, $font_size: pxToRem(24), $font-weight: 400, $line-height: pxToRem(32));
+                        @include color($color: $background-award-color);
+                        padding-bottom: pxToRem(8);
+                    }
+
+                    .address2 {
+                        @include font($font-family: $primary-font, $font_size: pxToRem(14), $font-weight: 300, $line-height: pxToRem(24));
+                        @include color($color: $background-award-color);
+                    }
+                }
+
+                .footer__top__content__right--email {
+                    .mail1 {
+                        @include font($font-family: $primary-font, $font_size: pxToRem(14), $font-weight: 300, $line-height: pxToRem(24));
+                        @include color($color: $background-award-color);
+                        padding-bottom: pxToRem(8);
+                    }
+
+                    .mail2 {
+                        @include font($font-family: $fourth-font, $font_size: pxToRem(24), $font-weight: 400, $line-height: pxToRem(32));
+                        @include color($color: $active-element-color);
+                    }
+                }
+
+                .footer__top__content__right--phone {
+                    .phone1 {
+                        @include font($font-family: $primary-font, $font_size: pxToRem(14), $font-weight: 300, $line-height: pxToRem(24));
+                        @include color($color: $background-award-color);
+                        padding-bottom: pxToRem(8);
+                    }
+
+                    .phone2 {
+                        @include font($font-family: $fourth-font, $font_size: pxToRem(24), $font-weight: 400, $line-height: pxToRem(32));
+                        @include color($color: $active-element-color);
+                    }
+                }
+                @include tablet{
+                    @include size($width: 40%);
+                }
+                @include desktop{
+                    @include size($width: 20%);
+                }
+            }
+        }
+    }
+
+    .footer__bottom {
+        @include desktop{
+            @include size($width: 87%);
+            gap: pxToRem(80);
+        }
+        @include flex($display: flex, $direction: column, $gap: pxToRem(40));
+        @include size($width: 90%);
+        margin: auto;
+
+        .footer__bottom--divider {
+            hr {
+                border: 1px solid $text-color-second;
+            }
+        }
+
+        .footer__bottom__content {
+            @include flex($display: flex, $direction: column, $gap: pxToRem(32));
+            @include desktop{
+                flex-direction: row;
+            }
+
+            .footer__bottom__content--left {
+                @include font($font-family: $primary-font, $font_size: pxToRem(16), $font-weight: 300, $line-height: pxToRem(24));
+                @include color($color: $background-award-color);
+
+                span {
+                    @include color($color: $active-element-color);
+                }
+            }
+
+            .footer__bottom__content--right {
+                @include flex($display: flex, $direction: column, $gap: pxToRem(16));
+                @include desktop{
+                    flex-direction: row;
+                    margin-left: auto;
+                }
+
+                .footer__bottom__content--right--eyebrow {
+                    opacity: 80%;
+                    @include flex($display: flex, $align: center, $gap: pxToRem(16));
+                    @include color($color: $text-color-primary);
+                    margin-right: auto;
+
+                    hr {
+                        @include size($width: pxToRem(64));
+                        @include boder($boder: 1px solid $text-color-primary);
+                    }
+
+                    p {
+                        @include font($font-family: $third-font, $font_size: pxToRem(14), $font-weight: 600, $line-height: pxToRem(20));
+                    }
+                }
+
+                .footer__bottom__content--right--icon {
+                    ul {
+                        @include flex($display: flex, $align: center, $gap: pxToRem(24));
+                    }
+                }
+            }
+        }
+    }
+}

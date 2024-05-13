@@ -18,7 +18,7 @@
                 @include flex($display: flex,$direction: row,$gap:32px);
                 li{
                     @include size($width:33%);
-                    @include flex($display: flex,$direction: column,$justify: flex-start,$align: flex-start,$gap: 8px);
+                    @include flex($display: flex,$direction: column,$justify: flex-start,$align: flex-start,$gap: 8px, $wrap: wrap);
                     p{
                         margin-left: 0;
                     }
@@ -36,6 +36,9 @@
                 li:nth-child(3){
                     .contentB{
                         @include size($width: pxToRem(170));
+                        @media screen and (max-width: 535px){
+                            @include size($width: pxToRem(100));
+                        }
                     }
                 }
             }
