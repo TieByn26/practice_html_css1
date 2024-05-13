@@ -21,7 +21,7 @@
     }
 
     .nav-container {
-        @include flex($display: flex, $justify: space-between, $gap: 16px, $align: baseline);
+        @include flex($display: flex, $justify: space-between, $gap: pxToRem(16), $align: baseline);
 
         .nav-ul {
             @include flex($display: none);
@@ -55,16 +55,16 @@
             }
 
             margin: auto;
-            margin-top: 82px;
-            width: 335px;
+            margin-top: pxToRem(82);
+            width: pxToRem(335);
 
-            @include flex($justify: space-between, $align: center, $gap: 24px);
+            @include flex($justify: space-between, $align: center, $gap: pxToRem(24));
 
             .header-bottom__contentA {
                 text-align: center;
                 color: $background-award-color;
 
-                @include font($font-family: $fourth-font, $font_size: 48px, $font-weight: 500, $line-height: 60px);
+                @include font($font-family: $fourth-font, $font_size: pxToRem(48), $font-weight: 500, $line-height: pxToRem(60));
 
                 span {
                     font-style: italic;
@@ -73,32 +73,32 @@
                 @include tablet {
                     width: 90%;
                     margin: auto;
-                    @include font($font_size: 72px, $line-height: 96px);
+                    @include font($font_size: pxToRem(72), $line-height: pxToRem(96));
                 }
 
                 @include desktop {
-                    @include font($font_size: 72px, $line-height: 96px);
+                    @include font($font_size: pxToRem(72), $line-height: pxToRem(96));
                 }
             }
 
             .header-bottom__contentB {
                 text-align: center;
-                margin-top: 24px;
+                margin-top: pxToRem(24);
 
-                @include font($font-family: $primary-font, $font-size: 18px, $font-weight: 300, $line-height: 32px);
+                @include font($font-family: $primary-font, $font-size: pxToRem(18), $font-weight: 300, $line-height: pxToRem(32));
 
                 @include tablet {
                     width: 90%;
                     margin: auto;
-                    margin-top: 24px;
-                    @include font($font_size: 20px, $line-height: 32px);
+                    margin-top: pxToRem(24);
+                    @include font($font_size: pxToRem(20), $line-height: pxToRem(32));
                 }
 
                 @include desktop {
                     width: 800px;
                     margin: auto;
                     margin-top: 24px;
-                    @include font($font_size: 20px, $line-height: 32px);
+                    @include font($font_size: pxToRem(20), $line-height: pxToRem(32));
                 }
             }
         }
@@ -108,7 +108,7 @@
             position: relative;
 
             .header-bottom__img {
-                @include size($width: 100%, $height: 640px);
+                @include size($width: 100%, $height: pxToRem(640));
 
                 margin: auto;
                 margin-top: 80px;
@@ -143,7 +143,7 @@
                 }
     
                 @include desktop {
-                    left: 112px;
+                    left: pxToRem(112);
                 }
 
                 & {
