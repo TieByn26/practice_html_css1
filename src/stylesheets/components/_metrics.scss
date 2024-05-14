@@ -1,82 +1,94 @@
 @use "../abstracts/" as *;
 
-.metrics{
-    @include flex($display: flex,$direction: column,$gap: 48px);
+.metrics {
+    @include flex($display: flex, $direction: column, $gap: pxToRem(48));
 
-    .metrics--list{
+    .metrics--list {
         margin: auto;
-        @include size($width:90%);
+        @include size($width: 90%);
 
-        @include desktop{
-            @include size($width:85%);
+        @include desktop {
+            @include size($width: 85%);
         }
 
-        ul{
-            @include flex($display: flex,$direction: column,$gap: 32px);
+        ul {
+            @include flex($display: flex, $direction: column, $gap: pxToRem(32));
 
-            @include tablet{
-                @include flex($display: flex,$direction: row,$gap:32px);
-                li{
-                    @include size($width:33%);
-                    @include flex($display: flex,$direction: column,$justify: flex-start,$align: flex-start,$gap: 8px, $wrap: wrap);
-                    p{
+            @include tablet {
+                @include flex($display: flex, $direction: row, $gap: pxToRem(32));
+
+                li {
+                    @include size($width: 33%);
+                    @include flex($display: flex, $direction: column, $justify: flex-start, $align: flex-start, $gap: pxToRem(8), $wrap: wrap);
+
+                    p {
                         margin-left: 0;
                     }
                 }
-                li:nth-child(1){
-                    .contentB{
+
+                li:nth-child(1) {
+                    .contentB {
                         @include size($width: pxToRem(100));
                     }
                 }
-                li:nth-child(2){
-                    .contentB{
+
+                li:nth-child(2) {
+                    .contentB {
                         @include size($width: pxToRem(150));
                     }
                 }
-                li:nth-child(3){
-                    .contentB{
+
+                li:nth-child(3) {
+                    .contentB {
                         @include size($width: pxToRem(170));
-                        @media screen and (max-width: 535px){
+
+                        @media screen and (max-width: pxToRem(535)) {
                             @include size($width: pxToRem(100));
                         }
                     }
                 }
             }
-        
-            @include desktop{
-                @include flex($display: flex,$direction: row,$gap:100px);
-                li{
-                    @include size($width:33%);
+
+            @include desktop {
+                @include flex($display: flex, $direction: row, $gap: pxToRem(100));
+
+                li {
+                    @include size($width: 33%);
                 }
-                li:nth-child(1){
-                    .contentB{
+
+                li:nth-child(1) {
+                    .contentB {
                         @include size($width: pxToRem(100));
                     }
                 }
-                li:nth-child(2){
-                    .contentB{
+
+                li:nth-child(2) {
+                    .contentB {
                         @include size($width: pxToRem(150));
                     }
                 }
-                li:nth-child(3){
-                    .contentB{
+
+                li:nth-child(3) {
+                    .contentB {
                         @include size($width: pxToRem(170));
                     }
                 }
-            }  
+            }
         }
     }
 
-    .metrics--line{
+    .metrics--line {
         margin: auto;
-        @include size($width:90%);
-        @include desktop{
-            @include size($width:85%);
+        @include size($width: 90%);
+
+        @include desktop {
+            @include size($width: 85%);
         }
-        
-        hr{
+
+        hr {
             @include boder($boder: 1px solid $text-color-second);
         }
+
         padding-bottom: 40px;
     }
 }

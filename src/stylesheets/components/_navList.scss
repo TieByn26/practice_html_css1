@@ -2,11 +2,11 @@
 
 .nav-container {
     ul {
-        @include flex($display: flex, $justify: space-between, $gap: 10px, $align: center);
+        @include flex($display: flex, $justify: space-between, $gap: pxToRem(10), $align: center);
 
         .nav__item {
             &-link {
-                @include font($font-family: $secondary-font, $font-size: pxToRem(14), $font-weight: 500, $line-height: 24px);
+                @include font($font-family: $secondary-font, $font-size: pxToRem(14), $font-weight: 500, $line-height: pxToRem(24));
                 @include color($color: $text-color-primary);
                 padding: 0 16px;
                 text-decoration: none;

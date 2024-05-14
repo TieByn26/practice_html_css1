@@ -1,24 +1,26 @@
 @use "../abstracts/" as *;
 
-.box-works{
-    @include flex($display:flex, $direction: column,$gap: pxToRem(16) );
-    .box-works--img{
+.box-works {
+    @include flex($display: flex, $direction: column, $gap: pxToRem(16));
 
-    }
-    .box-works__content{
-        @include flex($display:flex, $direction: column,$gap: pxToRem(16) );
-        .box-works__content--title{
-            @include font($font-family:$fourth-font, $font_size: pxToRem(24), $font-weight:400, $line-height: pxToRem(32));
-            @include color($color:$background-award-color);
-            @include desktop-and-tablet{
-                @include font($font-family:$fourth-font, $font_size: pxToRem(36), $font-weight:400, $line-height: pxToRem(32));
+    .box-works__content {
+        @include flex($display: flex, $direction: column, $gap: pxToRem(16));
+
+        .box-works__content--title {
+            @include font($font-family: $fourth-font, $font_size: pxToRem(24), $font-weight: 400, $line-height: pxToRem(32));
+            @include color($color: $background-award-color);
+
+            @include desktop-and-tablet {
+                @include font($font-family: $fourth-font, $font_size: pxToRem(36), $font-weight: 400, $line-height: pxToRem(32));
             }
         }
-        .box-works__content--description{
-            @include color($color:$text-color-primary);
-            @include font($font-family:$primary-font, $font_size: pxToRem(14), $font-weight:300, $line-height: pxToRem(24));
-            @include desktop-and-tablet{
-                @include font($font-family:$fourth-font, $font_size: pxToRem(18), $font-weight:300, $line-height: pxToRem(32));
+
+        .box-works__content--description {
+            @include color($color: $text-color-primary);
+            @include font($font-family: $primary-font, $font_size: pxToRem(14), $font-weight: 300, $line-height: pxToRem(24));
+
+            @include desktop-and-tablet {
+                @include font($font-family: $fourth-font, $font_size: pxToRem(18), $font-weight: 300, $line-height: pxToRem(32));
             }
         }
 
