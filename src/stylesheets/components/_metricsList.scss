@@ -8,6 +8,9 @@
 
         @include tablet{
             @include font($font_size:60px, $line-height:72px);
+            @media screen and (max-width: 535px){
+                @include font($font_size:50px, $line-height:72px);
+            }
         }
         @include desktop{
             @include font($font_size:60px, $line-height:72px);
