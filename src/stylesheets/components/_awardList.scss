@@ -66,6 +66,9 @@
 
                 li {
                     @include size($width: 47%);
+                    @media screen and (max-width: pxToRem(611)){
+                        @include size($width: 70%);
+                    }
                 }
 
                 margin-right: pxToRem(-40);

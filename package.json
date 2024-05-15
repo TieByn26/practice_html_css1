@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@parcel/transformer-sass": "^2.10.0",
+    "parcel": "^1.12.4",
     "posthtml": "^0.16.6"
   }
 }
