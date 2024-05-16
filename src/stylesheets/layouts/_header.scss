@@ -4,17 +4,17 @@
 .header-container {
 
     .header-top {
-        width: 100%;
+        @include size($width: 100%);
         padding: 26px 20px;
 
         @include tablet {
             padding: 26px 40px;
-            width: 100%;
+            @include size($width: 100%);
         }
 
         @include desktop {
             padding: 26px 112px;
-            width: 100%;
+            @include size($width: 100%);
         }
 
         @include flex($display: flex, $justify: space-between, $align: center);
@@ -30,8 +30,9 @@
         @include tablet {
             .nav-ul {
                 @include flex($display: flex);
-                @media screen and (max-width: pxToRem(527)){
-                    @include flex($display: none); 
+
+                @media screen and (max-width: pxToRem(527)) {
+                    @include flex($display: none);
                 }
             }
         }
@@ -46,27 +47,23 @@
     // Finish of setup style rules for navigation
 
     .header-bottom {
-        width: 100%;
+        @include size($width: 100%);
 
         .header-bottom__content {
-            @include tablet {
-                width: 100%;
-            }
 
-            @include desktop {
-                width: 100%;
+            @include desktop-and-tablet {
+                @include size($width: 100%);
             }
 
             margin: auto;
             margin-top: pxToRem(82);
-            width: pxToRem(335);
+            @include size($width: pxToRem(335));
 
             @include flex($justify: space-between, $align: center, $gap: pxToRem(24));
 
             .header-bottom__contentA {
                 text-align: center;
-                color: $background-award-color;
-
+                @include color($color: $background-award-color);
                 @include font($font-family: $fourth-font, $font_size: pxToRem(48), $font-weight: 500, $line-height: pxToRem(60));
 
                 span {
@@ -74,9 +71,8 @@
                 }
 
                 @include tablet {
-                    width: 90%;
                     margin: auto;
-                    @include font($font_size: pxToRem(72), $line-height: pxToRem(96));
+                    @include size($width: 90%);
                 }
 
                 @include desktop {
@@ -91,16 +87,16 @@
                 @include font($font-family: $primary-font, $font-size: pxToRem(18), $font-weight: 300, $line-height: pxToRem(32));
 
                 @include tablet {
-                    width: 90%;
-                    margin: auto;
-                    margin-top: pxToRem(24);
-                    @include font($font_size: pxToRem(20), $line-height: pxToRem(32));
+                    @include size($width: 90%);
                 }
 
                 @include desktop {
-                    width: 800px;
+                    @include size($width: pxToRem(800));
+                }
+
+                @include desktop-and-tablet {
                     margin: auto;
-                    margin-top: 24px;
+                    margin-top: pxToRem(24);
                     @include font($font_size: pxToRem(20), $line-height: pxToRem(32));
                 }
             }
@@ -114,37 +110,24 @@
                 @include size($width: 100%, $height: pxToRem(640));
 
                 margin: auto;
-                margin-top: 80px;
+                margin-top: pxToRem(80);
 
                 img {
                     @include size($width: 100%, $height: 100%);
                     object-fit: cover;
                 }
-
-                @include tablet {
-                    img {
-                        object-fit: cover;
-                    }
-                }
-
-                @include desktop {
-
-                    img {
-                        object-fit: cover;
-                    }
-                }
             }
 
             .header-bottom__icon {
                 position: absolute;
-                top: -60px;
-                left: 127px;
+                top: pxToRem(-60);
+                left: pxToRem(127);
                 cursor: pointer;
 
                 @include tablet {
                     left: 42%;
                 }
-    
+
                 @include desktop {
                     left: pxToRem(112);
                 }

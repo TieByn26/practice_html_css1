@@ -62,7 +62,7 @@
 
 //mixin_flex
 
-@mixin flex ($display: false, $direction: false, $align: false, $justify: false, $wrap: false, $gap: false) {
+@mixin flex ($display: false, $direction: false, $align: false, $justify: false, $wrap: false, $gap: false, $fwrap: false) {
     @if display {
         display: $display;
     }
@@ -85,6 +85,10 @@
 
     @if gap {
         gap: $gap;
+    }
+
+    @if fwrap {
+        flex-wrap: $wrap;
     }
 }
 

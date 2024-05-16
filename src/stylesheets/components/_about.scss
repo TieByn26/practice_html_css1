@@ -4,15 +4,14 @@
         margin: auto;
 
         .about-container {
-            width: 100%;
-            padding: 48px 0px;
+            @include size($width: 100%);
             @include flex($display: flex, $direction: column, $align: center, $gap: pxToRem(96));
+            padding: 48px 0px;
 
             @include desktop {
-                display: flex;
-                flex-direction: row;
+                @include flex($display:flex, $direction: row);
+                @include size($width: 85%);
                 padding: 128px 0;
-                width: 85%;
                 margin: auto;
             }
 
@@ -21,7 +20,7 @@
             }
 
             .about-content-para {
-                width: 90%;
+                @include size($width: 90%);
                 margin: auto;
                 @include flex($display: flex, $direction: column, $align: center, $gap: pxToRem(24));
 
@@ -68,7 +67,7 @@
                 }
 
                 @include desktop {
-                    width: 101%;
+                    @include size($width: 101%);
 
                     .contentA {
                         @include font($font-family: $fourth-font, $font_size: pxToRem(60), $font-weight: 400, $line-height: pxToRem(72));
@@ -83,14 +82,13 @@
 
             .about-content-img {
                 position: relative;
-                width: 90%;
                 margin: auto;
-                display: flex;
-                justify-content: space-around;
+                @include size($width: 90%);
+                @include flex($display: flex, $justify: space-around);
 
                 .img1,
                 .img2 {
-                    width: 47%;
+                    @include size($width: 47%);
                 }
 
                 .img1 {

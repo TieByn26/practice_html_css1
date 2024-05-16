@@ -3,22 +3,25 @@
 .box {
     @include boder($boder: 1px solid $boder-box-color);
 
-    .box--img{
+    .box--img {
         padding-top: pxToRem(24);
         padding-bottom: pxToRem(24);
-        @include size($width:81%);
+        @include size($width: 81%);
         margin: auto;
-        @include desktop-and-tablet{
+
+        @include desktop-and-tablet {
             padding-bottom: pxToRem(80);
         }
     }
+
     .box--title {
-        @include size($width:81%);
+        @include size($width: 81%);
         margin: auto;
         padding-bottom: pxToRem(24);
-        @include flex($display:flex, $direction: column, $gap:pxToRem(16));
+        @include flex($display: flex, $direction: column, $gap: pxToRem(16));
+
         .box--title--service {
-            
+
             @include font($font-family: $fourth-font, $font_size: pxToRem(30), $font-weight: 400, $line-height: pxToRem(40));
 
             @include desktop-and-tablet {

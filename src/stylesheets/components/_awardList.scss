@@ -3,53 +3,55 @@
 .award {
     padding: pxToRem(20) 0;
     @include color($background: $background-award-color);
-    @include flex($display: flex, $align: center, $gap: 10px);
+    @include flex($display: flex, $align: center, $gap: pxToRem(10));
 
     .award-list {
         margin: auto;
-        @include flex($display: flex, $align: center, $justify: space-between, $gap: 20px);
+        @include flex($display: flex, $align: center, $justify: space-between, $gap: pxToRem(20));
 
         .content_line {
             @include flex($display: flex, $align: center);
+            @include size($width: pxToRem(100), $height: pxToRem(76));
             margin: 0 0 300px -30px;
 
-            @include size($width: 100px, $height: 76px);
 
             p {
                 span {
-                    color: $background-color;
+                    @include color($color: $background-color);
+                    @include font($font-family: $fourth-font, $font-size: pxToRem(24), $font-weight: 400, $font-style: italic, $line-height: pxToRem(32));
                     opacity: 50%;
-                    @include font($font-family: $fourth-font, $font-size: 24px, $font-weight: 400, $font-style: italic, $line-height: 32px);
                 }
 
                 transform: rotate(-90deg);
             }
 
             hr {
-                color: $background-color;
+
+                @include color($color: $background-color);
+                @include size($height: pxToRem(24));
                 opacity: 50%;
-                height: 24px;
                 transform: rotate(-90deg);
             }
         }
 
         ul {
-            @include flex($display: flex, $gap: 24px, $direction: column);
+            @include flex($display: flex, $gap: pxToRem(24), $direction: column);
 
             li {
-                color: $text-color-second;
-                width: 251px;
+                @include color($color: $text-color-second);
+                @include size($width: pxToRem(251));
                 @include flex($display: flex, $align: center);
 
                 p {
-                    @include size($width: 141px, $height: 48px);
-                    margin-left: 10px;
+                    @include size($width: pxToRem(141), $height: pxToRem(48));
+                    margin-left: pxToRem(10);
                 }
 
             }
+
             li:nth-child(3) {
                 p {
-                    @include size($width: 101px, $height: 48px);
+                    @include size($width: pxToRem(101), $height: pxToRem(48));
                 }
             }
         }
@@ -60,52 +62,49 @@
 
 
             ul {
-                @include flex($display: flex, $align: center);
-                flex-direction: row;
-                flex-wrap: wrap;
+                @include flex($display: flex, $align: center, $direction: row, $wrap: wrap);
 
                 li {
-                    width: 47%;
+                    @include size($width: 47%);
                 }
 
-                margin-right: -40px;
-                padding-left: 30px;
+                margin-right: pxToRem(-40);
+                padding-left: pxToRem(30);
 
             }
 
             .content_line {
-                width: 136px;
+                @include size($width: pxToRem(136));
                 margin: auto;
 
                 p {
-                    margin-left: -30px;
+                    margin-left: pxToRem(-30);
                 }
 
                 hr {
-                    height: 64px;
-                    margin-left: 30px;
+                    @include size($height: pxToRem(64));
+                    margin-left: pxToRem(30);
                 }
             }
         }
 
         @include desktop {
             margin: auto;
-            gap: 120px;
-            @include size($width: 1216px, $height: 80px);
+            @include flex($gap: pxToRem(120));
+            @include size($width: pxToRem(1216), $height: pxToRem(80));
 
             ul {
                 padding: 0;
-                @include flex($display: flex, $align: center);
-                flex-direction: row;
+                @include flex($display: flex, $align: center, $direction: row);
             }
 
             .content_line {
                 hr {
-                    height: 64px;
-                    margin-left: 30px;
+                    @include size($height: pxToRem(64));
+                    margin-left: pxToRem(30);
                 }
 
-                margin-top: 300px;
+                margin-top: pxToRem(300);
 
             }
         }

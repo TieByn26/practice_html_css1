@@ -9,7 +9,8 @@
         padding: 8px 0 80px 0;
         gap: pxToRem(80);
     }
-    @include desktop{
+
+    @include desktop {
         padding-bottom: pxToRem(80);
         gap: pxToRem(80);
     }
@@ -17,10 +18,12 @@
     .footer__top {
         @include flex($display: flex, $direction: column, $gap: pxToRem(48));
         @include size($width: 90%);
-        @include desktop{
+
+        @include desktop {
             @include size($width: 87%);
             gap: pxToRem(80);
         }
+
         margin: auto;
 
         .footer__top--divider {
@@ -34,7 +37,8 @@
 
         .footer__top__content {
             @include flex($display: flex, $direction: column, $gap: pxToRem(48));
-            @include desktop{
+
+            @include desktop {
                 flex-direction: row;
                 justify-content: space-between;
             }
@@ -48,11 +52,12 @@
                     @include color($color: $active-element-color);
                 }
 
-                @include tablet {   
+                @include tablet {
                     @include size($width: 88%);
                     @include font($font-family: $fourth-font, $font_size: pxToRem(48), $font-weight: 400, $line-height: pxToRem(60));
                 }
-                @include desktop{
+
+                @include desktop {
                     @include size($width: 44%);
                     @include font($font-family: $fourth-font, $font_size: pxToRem(48), $font-weight: 400, $line-height: pxToRem(60));
                 }
@@ -99,10 +104,12 @@
                         @include color($color: $active-element-color);
                     }
                 }
-                @include tablet{
+
+                @include tablet {
                     @include size($width: 40%);
                 }
-                @include desktop{
+
+                @include desktop {
                     @include size($width: 20%);
                 }
             }
@@ -110,10 +117,11 @@
     }
 
     .footer__bottom {
-        @include desktop{
+        @include desktop {
             @include size($width: 87%);
             gap: pxToRem(80);
         }
+
         @include flex($display: flex, $direction: column, $gap: pxToRem(40));
         @include size($width: 90%);
         margin: auto;
@@ -126,7 +134,8 @@
 
         .footer__bottom__content {
             @include flex($display: flex, $direction: column, $gap: pxToRem(32));
-            @include desktop{
+
+            @include desktop {
                 flex-direction: row;
             }
 
@@ -141,7 +150,8 @@
 
             .footer__bottom__content--right {
                 @include flex($display: flex, $direction: column, $gap: pxToRem(16));
-                @include desktop{
+
+                @include desktop {
                     flex-direction: row;
                     margin-left: auto;
                 }
