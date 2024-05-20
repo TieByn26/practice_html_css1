@@ -1,5 +1,17 @@
 @use "../abstracts/" as *;
 
+@keyframes loop{
+    0%{
+        transform: rotate(-180deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
 // Start setup style rules for the header section
 .header-container {
 
@@ -119,6 +131,7 @@
             }
 
             .header-bottom__icon {
+                
                 position: absolute;
                 top: pxToRem(-60);
                 left: pxToRem(127);
@@ -132,13 +145,12 @@
                     left: pxToRem(112);
                 }
 
-                & {
-                    transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
-                }
-
-                &:hover {
-                    scale: 1.1;
-                }
+                // &:hover {
+                //     transform: scale(1.1);
+                //     transition: transform 0.1s ease-in-out, opacity 0.3s ease-in-out;
+                // }
+                
+                animation: loop 10s infinite linear;
             }
         }
     }
