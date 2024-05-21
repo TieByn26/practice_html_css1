@@ -37,7 +37,7 @@
                     p {
                         @include font($font-family: $third-font, $font_size: pxToRem(14), $font-weight: 600, $line-height: pxToRem(20));
                     }
-                    opacity: 80%;
+                    opacity: 0.8;
                 }
 
                 .about-content__para--bigtitle {
