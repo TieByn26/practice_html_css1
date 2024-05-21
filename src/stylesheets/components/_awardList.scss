@@ -60,12 +60,15 @@
             margin: auto;
             @include size($width: 80%);
 
-
             ul {
                 @include flex($display: flex, $align: center, $direction: row, $wrap: wrap);
 
                 li {
                     @include size($width: 47%);
+
+                    @media screen and (max-width: pxToRem(611)) {
+                        @include size($width: 70%);
+                    }
                 }
 
                 margin-right: pxToRem(-40);
@@ -76,6 +79,7 @@
             .content_line {
                 @include size($width: pxToRem(136));
                 margin: auto;
+                margin-left: -20px;
 
                 p {
                     margin-left: pxToRem(-30);
@@ -96,6 +100,7 @@
             ul {
                 padding: 0;
                 @include flex($display: flex, $align: center, $direction: row);
+                margin-left: pxToRem(-35);
             }
 
             .content_line {

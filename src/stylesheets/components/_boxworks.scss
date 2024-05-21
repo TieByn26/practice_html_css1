@@ -3,6 +3,12 @@
 .box-works {
     @include flex($display: flex, $direction: column, $gap: pxToRem(16));
 
+    &:hover {
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+        transform: scale(1.05);
+    }
+
     .box-works__content {
         @include flex($display: flex, $direction: column, $gap: pxToRem(16));
 

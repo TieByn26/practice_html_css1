@@ -27,6 +27,8 @@
         margin: auto;
 
         .footer__top--divider {
+            @include size($width: 99%);
+
             hr {
                 border: 1px solid $text-color-second;
             }
@@ -50,6 +52,11 @@
                 a {
                     font-style: italic;
                     @include color($color: $active-element-color);
+                }
+
+                a:hover {
+                    color: $background-award-color;
+                    font-weight: 800;
                 }
 
                 @include tablet {
@@ -127,12 +134,15 @@
         margin: auto;
 
         .footer__bottom--divider {
+            @include size($width: 99%);
+
             hr {
                 border: 1px solid $text-color-second;
             }
         }
 
         .footer__bottom__content {
+            @include size($width: 99%);
             @include flex($display: flex, $direction: column, $gap: pxToRem(32));
 
             @include desktop {
@@ -175,6 +185,12 @@
                 .footer__bottom__content--right--icon {
                     ul {
                         @include flex($display: flex, $align: center, $gap: pxToRem(24));
+
+                        li {
+                            &:hover {
+                                transform: scale(1.1);
+                            }
+                        }
                     }
                 }
             }

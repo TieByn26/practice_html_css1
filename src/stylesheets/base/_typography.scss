@@ -16,6 +16,10 @@
     font-family: RegularPlayfairDisplay;
     src: url(../assets/font/PlayfairDisplay-Regular.ttf) format("truetype");
 }
+@font-face {
+    font-family: PTsansItalic;
+    src: url(../assets/font/PTSans-Italic.ttf) format("truetype");
+}
 
 body {
     font-family: $primary-font;

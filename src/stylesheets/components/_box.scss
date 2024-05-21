@@ -34,4 +34,10 @@
             @include font($font-family: $primary-font, $font_size: pxToRem(18), $font-weight: 300, $line-height: pxToRem(32));
         }
     }
+
+    &:hover {
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        transform: scale(1.1);
+    }
 }

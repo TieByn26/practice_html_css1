@@ -9,7 +9,7 @@
             padding: 48px 0px;
 
             @include desktop {
-                @include flex($display:flex, $direction: row);
+                @include flex($display: flex, $direction: row);
                 @include size($width: 85%);
                 padding: 128px 0;
                 margin: auto;
@@ -19,19 +19,19 @@
                 padding: 96px 0;
             }
 
-            .about-content-para {
+            .about-content__para {
                 @include size($width: 90%);
                 margin: auto;
                 @include flex($display: flex, $direction: column, $align: center, $gap: pxToRem(24));
 
-                .about-us {
+                .about-content__para--us {
                     opacity: 80%;
                     @include flex($display: flex, $align: center, $gap: pxToRem(16));
                     @include color($color: $active-element-color);
                     margin-right: auto;
 
                     hr {
-                        @include size($width:pxToRem(64));
+                        @include size($width: pxToRem(64));
                         @include boder($boder: 1px solid $active-element-color);
                     }
 
@@ -40,7 +40,7 @@
                     }
                 }
 
-                .contentA {
+                .about-content__para--bigtitle {
                     @include color($color: $background-award-color);
                     @include font($font-family: $fourth-font, $font_size: pxToRem(36), $font-weight: 400, $line-height: pxToRem(48));
 
@@ -49,57 +49,47 @@
                     }
                 }
 
-                .contentB,
-                .contentC {
+                .about-content__para--lorem {
                     @include color($color: $text-color-primary);
                     @include font($font-family: $primary-font, $font_size: pxToRem(16), $font-weight: 300, $line-height: pxToRem(24));
                 }
 
-                @include tablet {
-                    .contentA {
-                        @include font($font-family: $fourth-font, $font_size: pxToRem(60), $font-weight: 400, $line-height: pxToRem(72));
-                    }
-
-                    .contentB,
-                    .contentC {
-                        @include font($font-family: $primary-font, $font_size: pxToRem(18), $font-weight: 300, $line-height: pxToRem(32));
-                    }
-                }
 
                 @include desktop {
                     @include size($width: 101%);
+                }
 
-                    .contentA {
+                @include desktop-and-tablet {
+
+                    .about-content__para--bigtitle {
                         @include font($font-family: $fourth-font, $font_size: pxToRem(60), $font-weight: 400, $line-height: pxToRem(72));
                     }
 
-                    .contentB,
-                    .contentC {
+                    .about-content__para--lorem {
                         @include font($font-family: $primary-font, $font_size: pxToRem(18), $font-weight: 300, $line-height: pxToRem(32));
                     }
                 }
             }
 
-            .about-content-img {
+            .about-content__img {
                 position: relative;
                 margin: auto;
                 @include size($width: 90%);
                 @include flex($display: flex, $justify: space-around);
 
-                .img1,
-                .img2 {
+                .about-content__img--left {
                     @include size($width: 47%);
-                }
-
-                .img1 {
                     padding-bottom: 14%;
+                    animation: move-up-down 3s infinite linear;
                 }
 
-                .img2 {
+                .about-content__img--right {
+                    @include size($width: 47%);
                     padding-top: 14%;
+                    animation: move-down-up 3s infinite linear;
                 }
 
-                .img3 {
+                .about-content__img--badge {
                     position: absolute;
                     top: pxToRem(-51);
                     left: pxToRem(141);
@@ -115,3 +105,34 @@
             }
         }
     }
+
+    @keyframes move-up-down {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(pxToRem(-40));
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+
+    }
+
+    @keyframes move-down-up {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(pxToRem(40));
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+
+    }
+    

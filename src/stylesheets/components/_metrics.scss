@@ -42,7 +42,7 @@
                     .contentB {
                         @include size($width: pxToRem(170));
 
-                        @media screen and (max-width: pxToRem(535)) {
+                        @media screen and (max-width: pxToRem(558)) {
                             @include size($width: pxToRem(100));
                         }
                     }
@@ -89,6 +89,6 @@
             @include boder($boder: 1px solid $text-color-second);
         }
 
-        padding-bottom: 40px;
+        padding-bottom: pxToRem(40);
     }
 }

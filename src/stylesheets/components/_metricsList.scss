@@ -4,17 +4,16 @@
     @include flex($display: flex, $align: center, $gap: pxToRem(16));
 
     .list-metric--contentA {
-        @include font($font-family: $fourth-font, $font_size: pxToRem(48), $font-weight: 400, $line-height: pxToRem(60));
+        @include font($font-family: $temp-font, $font_size: pxToRem(48), $font-weight: 400, $line-height: pxToRem(60));
         @include color($color: $background-award-color);
 
-        @include tablet {
-            @media screen and (max-width: 535px) {
-                @include font($font_size: pxToRem(50), $line-height: pxToRem(72));
-            }
-        }
 
         @include desktop-and-tablet {
             @include font($font_size: pxToRem(60), $line-height: pxToRem(72));
+
+            @media screen and (max-width: pxToRem(558)) {
+                @include font($font_size: pxToRem(45), $line-height: pxToRem(68));
+            }
         }
     }
 
