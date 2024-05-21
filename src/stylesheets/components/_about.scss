@@ -77,14 +77,17 @@
                 @include size($width: 90%);
                 @include flex($display: flex, $justify: space-around);
 
-                .about-content__img--left {
+                .figure-left , .figure-right{
                     @include size($width: 47%);
+                }
+                .about-content__img--left {
+                    @include size($width: 100%);
                     padding-bottom: 14%;
                     animation: move-up-down 3s infinite linear;
                 }
 
                 .about-content__img--right {
-                    @include size($width: 47%);
+                    @include size($width: 100%);
                     padding-top: 14%;
                     animation: move-down-up 3s infinite linear;
                 }
