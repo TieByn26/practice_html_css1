@@ -80,13 +80,13 @@
                 .about-content__img--left {
                     @include size($width: 47%);
                     padding-bottom: 14%;
-                    animation: move-up-down 1s infinite linear;
+                    animation: move-up-down 3s infinite linear;
                 }
 
                 .about-content__img--right {
                     @include size($width: 47%);
                     padding-top: 14%;
-                    animation: move-down-up 1s infinite linear;
+                    animation: move-down-up 3s infinite linear;
                 }
 
                 .about-content__img--badge {
@@ -112,7 +112,7 @@
         }
 
         50% {
-            transform: translateY(pxToRem(-10));
+            transform: translateY(pxToRem(-40));
         }
 
         100% {
@@ -127,7 +127,7 @@
         }
 
         50% {
-            transform: translateY(pxToRem(10));
+            transform: translateY(pxToRem(40));
         }
 
         100% {

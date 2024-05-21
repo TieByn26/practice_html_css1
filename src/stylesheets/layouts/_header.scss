@@ -11,6 +11,14 @@
         transform: rotate(180deg);
     }
 }
+// @keyframes scalee{
+//     from{
+//         scale: 1;
+//     }
+//     to{
+//         scale: 1.1;
+//     }
+// }
 
 // Start setup style rules for the header section
 .header-container {
@@ -146,7 +154,8 @@
                 }
 
                 // &:hover {
-                //     transform: scale(1.1);
+                //     // transform: scale(1.1);
+                //     animation: scalee;
                 //     transition: transform 0.1s ease-in-out, opacity 0.3s ease-in-out;
                 // }
                 
