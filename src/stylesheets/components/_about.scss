@@ -25,7 +25,7 @@
                 @include flex($display: flex, $direction: column, $align: center, $gap: pxToRem(24));
 
                 .about-content__para--us {
-                    opacity: 80%;
+                    opacity: 80%;   
                     @include flex($display: flex, $align: center, $gap: pxToRem(16));
                     @include color($color: $active-element-color);
                     margin-right: auto;

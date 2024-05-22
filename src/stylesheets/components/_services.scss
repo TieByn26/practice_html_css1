@@ -18,7 +18,7 @@
             @include flex($display: flex, $direction: column, $gap: pxToRem(24));
 
             .services__box--top--eyebrow {
-                opacity: 80%;
+                opacity: 8.1;
                 @include flex($display: flex, $align: center, $gap: pxToRem(16));
                 @include color($color: $active-element-color);
                 margin-right: auto;

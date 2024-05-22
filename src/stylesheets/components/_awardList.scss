@@ -19,7 +19,7 @@
                 span {
                     @include color($color: $background-color);
                     @include font($font-family: $fourth-font, $font-size: pxToRem(24), $font-weight: 400, $font-style: italic, $line-height: pxToRem(32));
-                    opacity: 50%;
+                    opacity: 0.5;
                 }
 
                 transform: rotate(-90deg);
@@ -29,7 +29,7 @@
 
                 @include color($color: $background-color);
                 @include size($height: pxToRem(24));
-                opacity: 50%;
+                opacity: 0.5;
                 transform: rotate(-90deg);
             }
         }
@@ -79,7 +79,7 @@
             .content_line {
                 @include size($width: pxToRem(136));
                 margin: auto;
-                margin-left: -20px;
+                margin-left: pxToRem(-20);
 
                 p {
                     margin-left: pxToRem(-30);
