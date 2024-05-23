@@ -167,7 +167,7 @@
                 }
 
                 .footer__bottom__content--right--eyebrow {
-                    opacity: 80%;
+                    opacity: 0.81;
                     @include flex($display: flex, $align: center, $gap: pxToRem(16));
                     @include color($color: $text-color-primary);
                     margin-right: auto;
@@ -188,7 +188,7 @@
 
                         li {
                             &:hover {
-                                transform: scale(1.1);
+                                transform: scale(1.3);
                             }
                         }
                     }

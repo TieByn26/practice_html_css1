@@ -27,7 +27,7 @@
             @include desktop {
                 @include size($width: 49%);
                 gap: pxToRem(96);
-                margin-bottom: 90px;
+                margin-bottom: pxToRem(90);
             }
 
             .works__box--col1--content {
@@ -40,7 +40,7 @@
                         padding-top: 0;
                     }
 
-                    opacity: 80%;
+                    opacity: 0.81;
                     @include flex($display: flex, $align: center, $gap: pxToRem(16));
                     @include color($color: $active-element-color);
                     margin-right: auto;
