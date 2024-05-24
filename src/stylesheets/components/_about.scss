@@ -25,7 +25,7 @@
                 @include flex($display: flex, $direction: column, $align: center, $gap: pxToRem(24));
 
                 .about-content__para--us {
-                    opacity: 80%;   
+
                     @include flex($display: flex, $align: center, $gap: pxToRem(16));
                     @include color($color: $active-element-color);
                     margin-right: auto;
@@ -38,6 +38,7 @@
                     p {
                         @include font($font-family: $third-font, $font_size: pxToRem(14), $font-weight: 600, $line-height: pxToRem(20));
                     }
+                    opacity: 0.81;
                 }
 
                 .about-content__para--bigtitle {
