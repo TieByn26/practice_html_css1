@@ -45,6 +45,8 @@
                 p {
                     @include size($width: pxToRem(141), $height: pxToRem(48));
                     margin-left: pxToRem(10);
+                    display: flex;
+                    align-items: center;
                 }
 
             }
